@@ -98,7 +98,17 @@
       flex-wrap: wrap;
       gap: 18px;
       color: var(--muted);
-      font-size: 0.95rem;
+      font-size: 1rem;
+      font-weight: 600;
+      letter-spacing: 0.01em;
+    }
+
+    .nav-links a {
+      transition: color .18s ease, opacity .18s ease;
+    }
+
+    .nav-links a:hover {
+      color: var(--text);
     }
 
     .nav-cta {
@@ -133,7 +143,8 @@
 
     .hero-main {
       border-radius: var(--radius-xl);
-      padding: 34px;
+      padding: 40px;
+      background: linear-gradient(180deg, rgba(13, 27, 46, 0.94), rgba(7, 17, 31, 0.84));
     }
 
     .eyebrow {
@@ -153,18 +164,39 @@
     h1, h2, h3 { margin: 0; }
 
     h1 {
-      font-size: clamp(2.4rem, 5vw, 4.5rem);
-      line-height: 0.98;
-      letter-spacing: -0.05em;
-      max-width: 12ch;
+      font-size: clamp(2.7rem, 5vw, 4.8rem);
+      line-height: 0.96;
+      letter-spacing: -0.055em;
+      max-width: 11ch;
     }
 
     .hero-copy {
       margin: 22px 0 0;
-      max-width: 58ch;
+      max-width: 60ch;
       color: var(--muted);
-      font-size: 1.08rem;
-      line-height: 1.7;
+      font-size: 1.12rem;
+      line-height: 1.78;
+    }
+
+    .hero-proofline {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 18px;
+    }
+
+    .hero-proofline span {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      min-height: 38px;
+      padding: 0 14px;
+      border-radius: 999px;
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(148, 163, 184, 0.15);
+      color: #dbe9fb;
+      font-size: 0.94rem;
+      font-weight: 600;
     }
 
     .hero-actions {
@@ -247,29 +279,31 @@
     .metric span, .side-copy, p { color: var(--muted); }
 
     .proof-strip {
-      margin-top: 24px;
-      border-radius: 22px;
-      padding: 20px 24px;
+      margin-top: 28px;
+      border-radius: 24px;
+      padding: 24px 26px;
       display: grid;
       grid-template-columns: repeat(4, minmax(0, 1fr));
-      gap: 18px;
+      gap: 20px;
+      background: linear-gradient(135deg, rgba(16, 29, 50, 0.9), rgba(10, 20, 35, 0.88));
     }
 
     .proof-item strong {
       display: block;
-      margin-bottom: 6px;
-      font-size: 1rem;
+      margin-bottom: 8px;
+      font-size: 1.02rem;
       color: var(--text);
     }
 
     .main-sections {
-      padding: 36px 0 84px;
+      padding: 44px 0 92px;
     }
 
     .section-card {
       border-radius: 24px;
-      padding: 28px;
-      margin-top: 22px;
+      padding: 32px;
+      margin-top: 26px;
+      background: linear-gradient(180deg, rgba(12, 22, 39, 0.88), rgba(10, 18, 31, 0.82));
     }
 
     .section-grid {
@@ -287,20 +321,24 @@
     }
 
     .section-copy {
-      font-size: 1.03rem;
-      line-height: 1.8;
+      font-size: 1.06rem;
+      line-height: 1.88;
+    }
+
+    .section-copy p + p {
+      margin-top: 16px;
     }
 
     .list, .cards, .steps {
       display: grid;
-      gap: 14px;
+      gap: 18px;
     }
 
     .list-item, .mini-card, .step-card {
       background: rgba(255,255,255,0.03);
       border: 1px solid rgba(148, 163, 184, 0.12);
       border-radius: 18px;
-      padding: 18px 18px;
+      padding: 22px 22px;
     }
 
     .list-item {
@@ -327,8 +365,13 @@
     }
 
     .mini-card h3, .step-card h3 {
-      font-size: 1.08rem;
+      font-size: 1.12rem;
       margin-bottom: 10px;
+    }
+
+    .mini-card p, .step-card p, .proof-item span, .metric span, .side-copy {
+      font-size: 1rem;
+      line-height: 1.72;
     }
 
     .step-number {
@@ -450,14 +493,19 @@
       <div class="container">
         <div class="hero-grid">
           <div class="hero-main">
-            <div class="eyebrow">IA aplicada para atendimento, operação e crescimento</div>
-            <h1>IA aplicada para atendimento, operação e crescimento da sua empresa.</h1>
+            <div class="eyebrow">IA, automação e agentes para operação empresarial</div>
+            <h1>Transforme atendimento, operação e crescimento com IA aplicada ao seu negócio.</h1>
             <p class="hero-copy">
-              Automatize rotinas, acelere respostas, organize processos e implemente agentes de IA com estratégia, integração e acompanhamento real.
+              Da voz ao WhatsApp, do follow-up ao backoffice, a ZICTEC estrutura agentes, automações e integrações para reduzir gargalos, acelerar respostas e dar escala à operação com controle real.
             </p>
+            <div class="hero-proofline">
+              <span>WhatsApp, voz e canais digitais</span>
+              <span>CRM, ERP, APIs e SIP/VoIP</span>
+              <span>Implantação sob medida e acompanhamento</span>
+            </div>
             <div class="hero-actions">
-              <a class="btn btn-primary" href="#contato">Agendar diagnóstico</a>
-              <a class="btn btn-secondary" href="https://wa.me/554732300435?text=Olá%2C%20quero%20conversar%20sobre%20uma%20aplicação%20de%20IA%20na%20minha%20empresa." target="_blank" rel="noreferrer">Falar com a ZICTEC no WhatsApp</a>
+              <a class="btn btn-primary" href="#contato">Agendar diagnóstico estratégico</a>
+              <a class="btn btn-secondary" href="https://wa.me/554732300435?text=Olá%2C%20quero%20falar%20com%20um%20especialista%20da%20ZICTEC%20sobre%20IA%20aplicada%20ao%20meu%20negócio." target="_blank" rel="noreferrer">Falar com um especialista</a>
             </div>
             <div class="hero-tags">
               <div class="tag-card">Agentes de IA para atendimento</div>
@@ -468,39 +516,39 @@
 
           <aside class="hero-side" aria-label="Destaques">
             <div>
-              <p class="side-copy">Estruturamos soluções que saem do discurso e entram na operação, conectando IA a canais, times e processos reais.</p>
+              <p class="side-copy">Mais do que um bot isolado: desenhamos a arquitetura certa para conectar IA à rotina, aos sistemas e aos canais onde a operação realmente acontece.</p>
             </div>
             <div class="metric">
               <strong>Atendimento</strong>
-              <span>agentes inteligentes para triagem, suporte e relacionamento em escala.</span>
+              <span>Agentes em voz, WhatsApp e web para triagem, resposta inicial, suporte e relacionamento com contexto.</span>
             </div>
             <div class="metric">
               <strong>Automação</strong>
-              <span>rotinas repetitivas, follow-up, organização de informação e integração entre sistemas.</span>
+              <span>Follow-up, cobrança, backoffice e fluxos repetitivos com menos dependência de execução manual.</span>
             </div>
             <div class="metric">
-              <strong>Implantação</strong>
-              <span>projetos sob medida com desenho técnico, acompanhamento e evolução contínua.</span>
+              <strong>Integração</strong>
+              <span>CRM, ERP, APIs, telefonia, SIP/VoIP e workflows sob medida para encaixar a IA na operação real.</span>
             </div>
           </aside>
         </div>
 
         <div class="proof-strip">
           <div class="proof-item">
-            <strong>Atendimento mais rápido</strong>
-            <span>Reduza gargalos e ganhe consistência nos canais de contato.</span>
+            <strong>Implantação sob medida</strong>
+            <span>Diagnóstico, desenho técnico e execução com lógica de negócio, não apenas configuração superficial.</span>
           </div>
           <div class="proof-item">
-            <strong>Menos trabalho manual</strong>
-            <span>Automatize etapas que hoje dependem de esforço repetitivo da equipe.</span>
+            <strong>Integrações reais</strong>
+            <span>Conecte a IA aos sistemas, canais e fluxos que a empresa já usa no dia a dia.</span>
           </div>
           <div class="proof-item">
-            <strong>Mais organização operacional</strong>
-            <span>Centralize contexto, processos e decisões com lógica clara de execução.</span>
+            <strong>Menos gargalo operacional</strong>
+            <span>Reduza tarefas repetitivas, tempos de resposta e perda de contexto entre áreas.</span>
           </div>
           <div class="proof-item">
-            <strong>Mais inteligência no crescimento</strong>
-            <span>Use IA para captar, responder e operar com mais capacidade.</span>
+            <strong>Evolução contínua</strong>
+            <span>Refino de prompts, regras, fluxos e métricas conforme a operação aprende e cresce.</span>
           </div>
         </div>
       </div>
@@ -642,11 +690,11 @@
           <div>
             <div class="eyebrow">Próximo passo</div>
             <h2 class="section-title">Vamos desenhar a melhor aplicação de IA para a sua operação.</h2>
-            <p>Converse com a ZICTEC e entenda onde a IA pode gerar ganho real no seu contexto.</p>
+            <p>Converse com a ZICTEC e entenda onde a IA pode gerar ganho real no seu contexto, com arquitetura sob medida, integrações reais e acompanhamento de implantação.</p>
           </div>
           <div class="cta-actions-stack">
-            <a class="btn btn-primary" href="mailto:suporte@zictec.com.br?subject=Diagn%C3%B3stico%20ZICTEC%20AI">Agendar diagnóstico</a>
-            <a class="btn btn-secondary" href="https://wa.me/554732300435?text=Olá%2C%20quero%20agendar%20um%20diagnóstico%20sobre%20IA%20com%20a%20ZICTEC." target="_blank" rel="noreferrer">Falar no WhatsApp</a>
+            <a class="btn btn-primary" href="mailto:suporte@zictec.com.br?subject=Diagn%C3%B3stico%20ZICTEC%20AI">Agendar diagnóstico estratégico</a>
+            <a class="btn btn-secondary" href="https://wa.me/554732300435?text=Olá%2C%20quero%20agendar%20um%20diagnóstico%20estratégico%20sobre%20IA%20com%20a%20ZICTEC." target="_blank" rel="noreferrer">Falar com um especialista</a>
           </div>
         </section>
       </div>
